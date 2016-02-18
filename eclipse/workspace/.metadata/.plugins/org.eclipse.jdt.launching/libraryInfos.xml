@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<libraryInfos>
+<libraryInfo home="D:\application\java.jar1.7.2" version="1.7.0_67">
+<bootpath>
+<entry path="D:\application\java.jar1.7.2\lib\resources.jar"/>
+<entry path="D:\application\java.jar1.7.2\lib\rt.jar"/>
+<entry path="D:\application\java.jar1.7.2\lib\sunrsasign.jar"/>
+<entry path="D:\application\java.jar1.7.2\lib\jsse.jar"/>
+<entry path="D:\application\java.jar1.7.2\lib\jce.jar"/>
+<entry path="D:\application\java.jar1.7.2\lib\charsets.jar"/>
+<entry path="D:\application\java.jar1.7.2\lib\jfr.jar"/>
+<entry path="D:\application\java.jar1.7.2\classes"/>
+</bootpath>
+<extensionDirs>
+<entry path="D:\application\java.jar1.7.2\lib\ext"/>
+<entry path="C:\Windows\Sun\Java\lib\ext"/>
+</extensionDirs>
+<endorsedDirs>
+<entry path="D:\application\java.jar1.7.2\lib\endorsed"/>
+</endorsedDirs>
+</libraryInfo>
+</libraryInfos>

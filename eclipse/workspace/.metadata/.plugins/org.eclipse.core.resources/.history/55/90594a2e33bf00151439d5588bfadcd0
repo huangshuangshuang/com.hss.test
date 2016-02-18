@@ -1,0 +1,16 @@
+package com.haowu.hss;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Map<K,V> extends HashMap<K, V>{
+	
+	private static final long serialVersionUID = 1485414518151L;
+	
+	
+	
+	public static void main(String[] args) {
+		HashMap<String, Object> map=new HashMap<String, Object>();
+		
+	}
+}

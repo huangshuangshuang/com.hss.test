@@ -1,0 +1,74 @@
+package com.hss.game.core;
+
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Image;
+import java.awt.Toolkit;
+import java.awt.image.ImageObserver;
+
+public class DrawImage extends JFrameImpl {
+
+	private static final long serialVersionUID = -3337831038156701838L;
+	private int x = 0, y = 0, w = 0, h = 0;
+	private Image[] images;
+	private int[][] init;
+	private ImageObserver observer;
+
+	public DrawImage() {
+		super("ªÊª≠≤‚ ‘", Color.blue);
+		init();
+	}
+
+	public void init() {
+		observer = this;
+		images = new Image[3];
+		for (int i = 0; i < 3; i++) {
+			Image image = Toolkit.getDefaultToolkit().getImage("C:\\Users\\300002\\Desktop\\image\\" + i + ".png");
+			images[i] = image;
+		}
+		init = new int[][] { { 3, 3, 1, 1, 1, 1, 1, 3, 3 }, { 3, 3, 1, 0, 0, 0, 1, 3, 3 },
+				{ 1, 1, 1, 0, 1, 0, 1, 1, 1 }, { 1, 0, 0, 0, 0, 0, 0, 0, 1 }, { 1, 0, 1, 0, 0, 0, 1, 0, 1 },
+				{ 1, 0, 0, 0, 1, 0, 0, 0, 1 }, { 1, 1, 0, 0, 0, 0, 0, 1, 1 }, { 3, 1, 0, 0, 0, 0, 1, 1, 3 },
+				{ 3, 1, 1, 1, 1, 1, 1, 3, 3 } };
+	}
+
+	@Override
+	public void paint(Graphics g) {
+		for (int i = 0; i < init.length; i++) {
+			for (int j = 0; j < init[0].length; j++) {
+				switch (init[i][j]) {
+				case 0:
+					w = images[0].getWidth(observer);
+					h = images[0].getHeight(observer);
+					g.drawImage(images[0], x, y, observer);
+					x += w;
+					break;
+				case 1:
+					w = images[1].getWidth(observer);
+					h = images[1].getHeight(observer);
+					g.drawImage(images[1], x, y, observer);
+					x += w;
+					break;
+				case 2:
+					w = images[2].getWidth(observer);
+					h = images[2].getHeight(observer);
+					g.drawImage(images[2], x, y, observer);
+					x += w;
+					break;
+				default:
+					x += w;
+					break;
+				}
+			}
+			x = 0;
+			y += h;
+		}
+		System.out.println("======");
+	}
+
+	public static void main(String[] args) {
+		DrawImage drawImage = new DrawImage();
+
+	}
+
+}

@@ -1,0 +1,9 @@
+14:05:35 **** Build of configuration Debug for project Test ****
+make all 
+'Building file: ../src/Test.c'
+'Invoking: Cross GCC Compiler'
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test.d" -MT"src/Test.o" -o "src/Test.o" "../src/Test.c"
+../src/Test.c: In function `int main()':
+../src/Test.c:16: error: expected primary-expression before "int"
+../src/Test.c:16: error: expected `;' before "int"
+make: *** [src/Test.o] Error 1

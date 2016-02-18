@@ -1,0 +1,42 @@
+package com.haowu.interest;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+public class Test {
+	
+	private static File file;
+	private static FileOutputStream outputStream;
+	private static User user = User.build();
+
+	static {
+		try {
+			file=new File("C:/Users/300002/Desktop/user.txt");
+			outputStream = new FileOutputStream(file);
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+	}
+
+	public static void main(String[] args) {
+		for (int i = 0; i < 100; i++) {
+			StringBuilder sql = new StringBuilder();
+			sql.append("\""+user.getName() + "\"");
+			sql.append("\""+user.getIdCard() +"\"");
+			sql.append("\""+user.getSex() + "\"");
+			sql.append("\""+user.getAge() + "\"");
+			sql.append("\""+user.getNumber() + "\"");
+			sql.append("\""+user.getAddress() +"\";\r\n");
+			byte[] buff = sql.toString().getBytes();
+			try {
+				outputStream.write(buff);
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+		
+		System.out.println("执行完毕");
+	}
+}

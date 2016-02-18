@@ -1,0 +1,23 @@
+package com.hss.game.core;
+
+public class Test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Integer i1 = 13;
+		Integer i2 = 13;
+		System.out.println(i1==i2);//-128~127
+		
+		i1 = new Integer(13);
+		i2 = new Integer(13);
+		System.out.println(i1==i2);//-128~127
+		System.out.println(i1.compareTo(i2));
+		System.out.println(i1.equals(i2));
+		
+		i1 = 137;
+		i2 = 137;
+		System.out.println(i1==i2);//-128~127
+
+	}
+
+}

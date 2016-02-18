@@ -1,0 +1,23 @@
+package com.haowu.hss;
+
+public class SingleTon implements Cloneable{
+	public long getSum(int n){
+		if(n==1){
+			return 1;
+		}
+		return n+getSum(n-1);
+	}
+	public static void main(String[] args) {
+		SingleTon singleTon=new SingleTon();
+		println(singleTon.getSum(5));
+	}
+	
+	private static void println(long str){
+		System.out.println(str);
+	}
+	@Override
+	protected Object clone() throws CloneNotSupportedException {
+		// TODO Auto-generated method stub
+		return super.clone();
+	}
+}
