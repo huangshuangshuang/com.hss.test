@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename type &apos;com.haowu.interest.Util&apos; to &apos;User&apos;&#x0D;&#x0A;- Original project: &apos;Game&apos;&#x0D;&#x0A;- Original element: &apos;com.haowu.interest.Util&apos;&#x0D;&#x0A;- Renamed element: &apos;com.haowu.interest.User&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Util&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.haowu.interest{Util.java[Util" matchStrategy="1" name="User" qualified="false" references="true" similarDeclarations="false" stamp="1445940423665" textual="false" version="1.0"/>
-</session>
